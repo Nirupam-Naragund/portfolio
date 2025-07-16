@@ -13,20 +13,14 @@ import {
 import { useState } from "react";
 
 export function NavbarDemo() {
-  const navItems = [
-    {
-      name: "Features",
-      link: "#features",
-    },
-    {
-      name: "Pricing",
-      link: "#pricing",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
-  ];
+const navItems = [
+  { name: "Home", link: "#home" },
+  { name: "Experience", link: "#experience" },
+  { name: "Projects", link: "#projects" },
+  { name: "Skills", link: "#skills" },
+  { name: "Achievements", link: "#achievements" },
+  {name: "Contact", link: "#contact" },
+];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -68,20 +62,7 @@ export function NavbarDemo() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
+
             </div>
           </MobileNavMenu>
         </MobileNav>
